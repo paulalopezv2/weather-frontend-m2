@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Clima - Paula López</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg bg-white shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">🌤️ App de Clima Paula</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="detalle.html">Detalle</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Acerca de</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- TÍTULO -->
+<div class="container text-center mt-4">
+    <h1 class="main-title">Clima por ciudades</h1>
+    <p class="text-muted">Selecciona una localidad para ver su clima actual y el pronóstico de la semana.</p>
+</div>
+
+<!-- BUSCADOR -->
+<div class="buscador-wrapper">
+    <input 
+        type="text" 
+        id="buscador" 
+        class="buscador-input"
+        placeholder="🔍 Buscar ciudad...">
+</div>
+
+<!-- TARJETAS DE CIUDADES (CENTRADAS) -->
+<div class="container">
+    <div id="contenedor-cards" 
+         class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4 justify-content-center mt-4">
+
+        <!-- 1 - Talca -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">🌤️</div>
+                <h3 class="nombre-ciudad">Talca</h3>
+                <p class="temperatura">18°C • Parcial nublado</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 2 - Santiago -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">☀️</div>
+                <h3 class="nombre-ciudad">Santiago</h3>
+                <p class="temperatura">26°C • Soleado</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 3 - Temuco -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">🌧️</div>
+                <h3 class="nombre-ciudad">Temuco</h3>
+                <p class="temperatura">14°C • Lluvia</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 4 - Viña del Mar -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">⛅</div>
+                <h3 class="nombre-ciudad">Viña del Mar</h3>
+                <p class="temperatura">17°C • Nublado</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 5 - La Serena -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">🌤️</div>
+                <h3 class="nombre-ciudad">La Serena</h3>
+                <p class="temperatura">21°C • Parcial sol</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 6 - Concepción -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">⛈️</div>
+                <h3 class="nombre-ciudad">Concepción</h3>
+                <p class="temperatura">16°C • Tormenta</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 7 - Coyhaique -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">❄️</div>
+                <h3 class="nombre-ciudad">Coyhaique</h3>
+                <p class="temperatura">3°C • Nevado</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 8 - Punta Arenas -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">🌬️</div>
+                <h3 class="nombre-ciudad">Punta Arenas</h3>
+                <p class="temperatura">12°C • Viento</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 9 - Valdivia -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">🌦️</div>
+                <h3 class="nombre-ciudad">Valdivia</h3>
+                <p class="temperatura">15°C • Chubascos</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+        <!-- 10 - Rancagua -->
+        <div class="col">
+            <div class="card-clima">
+                <div class="icono-clima">🌤️</div>
+                <h3 class="nombre-ciudad">Rancagua</h3>
+                <p class="temperatura">19°C • Parcial sol</p>
+                <button class="btn-detalle">Ver detalle</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center mt-5 py-3">
+    <p class="m-0">App de Clima — Proyecto Módulo 2 — Desarrollado por <strong>Paula López</strong> 💛</p>
+</footer>
+
+<!-- JS -->
+<script src="assets/js/app.js"></script>
+
+</body>
+</html>

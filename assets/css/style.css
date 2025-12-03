@@ -1,0 +1,252 @@
+/* ------------------------- */
+/*     FONDO CON ONDAS      */
+/* ------------------------- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('../img/fondo1.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ------------------------- */
+/*     TÍTULO PRINCIPAL     */
+/* ------------------------- */
+.main-title {
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    background: linear-gradient(90deg, #3b82f6, #0ea5e9, #22d3ee);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+/* ------------------------- */
+/*         NAVBAR            */
+/* ------------------------- */
+.navbar-brand {
+    color: #0ea5e9 !important;
+    font-weight: 700;
+}
+
+.nav-link {
+    color: #64748b !important;
+    font-weight: 500;
+}
+
+.nav-link.active,
+.nav-link:hover {
+    color: #0ea5e9 !important;
+}
+
+/* ------------------------- */
+/*         BOTÓN PASTEL      */
+/* ------------------------- */
+.btn-pastel {
+    background-color: #f9a8d4;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.btn-pastel:hover {
+    background-color: #ec4899;
+}
+
+/* ------------------------- */
+/*         FOOTER            */
+/* ------------------------- */
+footer {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================= */
+/*         CARDS CLIMA UI/UX     */
+/* ============================= */
+
+.card-clima {
+    border: none;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card-clima:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.22);
+}
+
+.icono-clima {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #0ea5e9;
+}
+
+.nombre-ciudad {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.temperatura {
+    font-size: 1.1rem;
+    color: #475569;
+    margin-bottom: 15px;
+}
+
+.btn-detalle {
+    background: #0ea5e9;
+    border: none;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-detalle:hover {
+    background: #0284c7;
+}
+
+/* =============================== */
+/*      TARJETA DETALLE UI/UX      */
+/* =============================== */
+
+.tarjeta-detalle {
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 30px;
+    padding: 35px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* Icono grande */
+.icono-detalle {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+/* Ciudad */
+.ciudad-detalle {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: #0f172a;
+}
+
+/* Temperatura grande */
+.temp-detalle {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #0284c7;
+    margin-bottom: 20px;
+}
+
+/* Info adicional */
+.info-extra p {
+    font-size: 1rem;
+    margin: 0;
+    color: #475569;
+    font-weight: 500;
+}
+
+/* Subtítulo */
+.subtitulo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #0f172a;
+}
+
+/* Mini cards */
+.mini-card {
+    background: rgba(255, 255, 255, 0.55);
+    border-radius: 18px;
+    padding: 12px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.10);
+}
+
+.dia {
+    font-weight: 700;
+    color: #0f172a;
+}
+
+.icono-mini {
+    font-size: 28px;
+    margin: 5px 0;
+}
+
+.temp-mini {
+    font-size: 1rem;
+    color: #475569;
+}
+
+/* Botón volver */
+.btn-volver {
+    display: inline-block;
+    background: #0ea5e9;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.btn-volver:hover {
+    background: #0284c7;
+}
+
+.buscador-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px 0;
+}
+
+.buscador-input {
+    width: 350px;
+    max-width: 90%;
+    border-radius: 12px;
+    padding: 10px 15px;
+    border: 2px solid #cbeafd;
+    background: #ffffffcc;
+    backdrop-filter: blur(4px);
+    font-family: 'Poppins', sans-serif;
+    transition: 0.2s ease;
+}
+
+.buscador-input:focus {
+    border-color: #52b7ff;
+    box-shadow: 0 0 10px #52b7ff55;
+    outline: none;
+}
+
+/* Centrado de tarjetas al filtrar */
+.contenedor-ciudades {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;      /* Centra horizontalmente */
+    align-items: flex-start;      /* Alinea arriba */
+    gap: 25px;                    /* Separa tarjetas de forma uniforme */
+}
+
+/* CENTRAR LA CARD CUANDO SOLO QUEDA UNA FILTRADA */
+#contenedor-cards .card-clima {
+    margin-left: auto;
+    margin-right: auto;
+}
