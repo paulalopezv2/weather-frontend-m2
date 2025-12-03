@@ -1,5 +1,7 @@
+// Proyecto Módulo 2 – Paula López
+
 // App de Clima - Paula López
-// Aquí iremos agregando paso a paso la lógica en JS
+
 
 console.log("App de Clima cargada ✅");
 

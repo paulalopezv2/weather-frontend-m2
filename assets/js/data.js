@@ -1,4 +1,4 @@
-// Datos de clima inventados (mock) para todas las ciudades
+// Datos de clima inventados 
 
 const climaData = {
 

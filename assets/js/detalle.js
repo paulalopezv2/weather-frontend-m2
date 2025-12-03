@@ -2,7 +2,7 @@
 const params = new URLSearchParams(window.location.search);
 const ciudadParam = params.get("ciudad");
 
-// Decodificar por si viene con espacios (%20)
+// Decodificar 
 const ciudad = ciudadParam ? decodeURIComponent(ciudadParam) : null;
 
 console.log("Ciudad desde URL:", ciudad);
