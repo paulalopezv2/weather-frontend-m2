@@ -47,3 +47,5 @@ Paula López – Bootcamp Academy
 Proyecto Portafolio Módulo 2 – Frontend
 
 Proyecto finalizado
+
+https://github.com/paulalopezv2/weather-frontend-m2
