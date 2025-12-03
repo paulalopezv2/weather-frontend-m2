@@ -45,3 +45,5 @@ Autora
 
 Paula López – Bootcamp Academy
 Proyecto Portafolio Módulo 2 – Frontend
+
+Proyecto finalizado
