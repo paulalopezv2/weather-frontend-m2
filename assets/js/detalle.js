@@ -1,48 +1,52 @@
-// Leer la ciudad desde la URL
-const params = new URLSearchParams(window.location.search);
-const ciudadParam = params.get("ciudad");
+// Obtener la ciudad desde la URL (versión simple)
+var parametros = new URLSearchParams(window.location.search);
+var ciudad = parametros.get("ciudad");
 
-// Decodificar 
-const ciudad = ciudadParam ? decodeURIComponent(ciudadParam) : null;
+// Decodificar por si trae espacios
+if (ciudad) {
+    ciudad = decodeURIComponent(ciudad);
+}
 
-console.log("Ciudad desde URL:", ciudad);
-
-// Verificar que exista en los datos mock
+// Verificar si existe en los datos
 if (ciudad && climaData[ciudad]) {
 
-    const data = climaData[ciudad];
+    var data = climaData[ciudad];
 
-    // Título ciudad
+    // Título de la ciudad
     document.querySelector(".ciudad-detalle").innerText = ciudad;
 
-    // Temperatura grande
+    // Temperatura principal
     document.querySelector(".temp-detalle").innerText = data.temperatura + "°C";
 
     // Icono principal
     document.querySelector(".icono-detalle").innerText = data.icono;
 
-    // Info extra
-    document.querySelector(".info-extra").innerHTML = `
-        <p>Humedad: <strong>${data.humedad}%</strong></p>
-        <p>Viento: <strong>${data.viento} km/h</strong></p>
-        <p>Sensación térmica: <strong>${data.sensacion}°C</strong></p>
-    `;
+    // Información adicional
+    var info = "";
+    info += "<p>Humedad: <strong>" + data.humedad + "%</strong></p>";
+    info += "<p>Viento: <strong>" + data.viento + " km/h</strong></p>";
+    info += "<p>Sensación térmica: <strong>" + data.sensacion + "°C</strong></p>";
 
-    // Pronóstico semanal (mini cards)
-    const contenedor = document.querySelector(".row");
+    document.querySelector(".info-extra").innerHTML = info;
+
+    // Pronóstico semanal
+    var contenedor = document.querySelector(".row");
     contenedor.innerHTML = "";
 
-    data.pronostico.forEach(d => {
-        contenedor.innerHTML += `
-        <div class="col">
-            <div class="mini-card">
-                <div class="dia">${d.dia}</div>
-                <div class="icono-mini">${d.icono}</div>
-                <div class="temp-mini">${d.temp}°C</div>
-            </div>
-        </div>`;
-    });
+    // Ciclo tradicional (más nivel M2)
+    for (var i = 0; i < data.pronostico.length; i++) {
+        var d = data.pronostico[i];
+
+        contenedor.innerHTML +=
+            '<div class="col">' +
+                '<div class="mini-card">' +
+                    '<div class="dia">' + d.dia + '</div>' +
+                    '<div class="icono-mini">' + d.icono + '</div>' +
+                    '<div class="temp-mini">' + d.temp + '°C</div>' +
+                '</div>' +
+            '</div>';
+    }
 
 } else {
-    console.log("Ciudad no encontrada en climaData:", ciudad);
+    console.log("Ciudad no encontrada");
 }
